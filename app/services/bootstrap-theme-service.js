@@ -102,7 +102,6 @@ export default class BootstrapThemeServiceService extends Service {
   @tracked theme
 
   loadTheme() {
-    debugger
     const json = window.localStorage.getItem(THEME_KEY)
 
     if (json) {
@@ -133,6 +132,8 @@ export default class BootstrapThemeServiceService extends Service {
     const root = document.documentElement
 
     const newTheme = Object.keys(properties).reduce((theme, property) => {
+      if (!properties[property]) return
+
       if (colors.includes(property)) {
         const [h, s, l] = colorToHsl(properties[property])
 
@@ -146,7 +147,9 @@ export default class BootstrapThemeServiceService extends Service {
     }, {})
 
     Object.keys(newTheme).forEach(property => {
-      root.style.setProperty(`--${dasherize(property)}`, newTheme[property])
+      if (newTheme[property]) {
+        root.style.setProperty(`--${dasherize(property)}`, newTheme[property])
+      }
     })
   }
 
