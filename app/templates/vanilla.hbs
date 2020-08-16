@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="container vanilla-container">
+  <p class="vanilla-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, cumque in perferendis aspernatur repellat magni similique fugit pariatur ducimus nobis!</p>
+
+  <form {{on "submit" this.submit}}>
+    <div class="vanilla-input-group">
+      <label for="primary">Primary</label>
+      <Input  id="primary" class="vanilla-input" type="text" @value={{this.primaryColor}} />
+    </div>
+
+    <div class="vanilla-input-group">
+      <label for="secondary">Secondary</label>
+      <Input id="secondary" class="vanilla-input" type="text" @value={{this.secondaryColor}} />
+    </div>
+
+    <div class="vanilla-input-group">
+      <label for="fontSize">Font Size</label>
+      <Input id="fontSize" class="vanilla-input" type="text" @value={{this.fontSize}} />
+    </div>
+
+    <div class="vanilla-input-group">
+      <label for="spacing">Spacing</label>
+      <Input id="spacing" class="vanilla-input" type="text" @value={{this.spacing}} />
+    </div>
+
+    <button type="submit" class="vanilla-button-primary">Update</button>
+    <button {{on "click" this.reset}} class="vanilla-button-secondary" >Reset</button>
+  </form>
+</div>

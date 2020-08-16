@@ -1,0 +1,47 @@
+:root {
+  --spacing: .5rem;
+}
+
+
+.vanilla-container {
+  form {
+    max-width: 640px;
+    margin: auto;
+  }
+
+  .vanilla-input-group {
+    margin-top: var(--spacing);
+  }
+
+  .vanilla-paragraph {
+    padding: var(--spacing)
+  }
+
+  .vanilla-input {
+    width: 100%;
+  }
+
+  .vanilla-button-primary {
+    margin-top: var(--spacing);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--white);
+    padding: var(--spacing);
+
+    &:hover {
+      opacity: 90%;
+    }
+  }
+
+  .vanilla-button-secondary {
+    margin-top: var(--spacing);
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+    padding: var(--spacing);
+
+    &:hover {
+      opacity: 90%;
+    }
+  }
+}
