@@ -4,7 +4,17 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-cli-babel': {
+      includePolyfill: true
+    },
+    outputPaths: {
+      app: {
+        css: {
+          'app': '/assets/theme-poc.css',
+          'ie': '/assets/theme-poc-ie.css'
+        }
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
