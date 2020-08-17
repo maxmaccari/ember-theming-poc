@@ -3,6 +3,8 @@ import { tracked } from '@glimmer/tracking'
 import { dasherize } from '@ember/string'
 import trim from 'lodash/trim'
 
+// This service was based on https://dev.to/philhardwick/changing-bootstrap-theme-at-runtime-with-css-variables-3jm1
+
 const THEME_KEY = '_bootstrap_theme'
 const colors = [
   'blue',
@@ -27,6 +29,8 @@ const colors = [
   'light',
   'dark'
 ]
+
+// the following functions are taken from https://gist.github.com/johanlef/518a511b2b2f6b96c4f429b3af2f169a#file-apply-colors-jsx
 
 const rgbToHsl = (red, green, blue) => {
   const r = Number(trim(red)) / 255

@@ -1,7 +1,11 @@
 # theme-poc
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This poc demonstrate a theming using CSS Vars with pollyfills that enable this to run on IE11.
+
+The first example is the `vanilla`, that is the theming using the pure css and css vars. This work well on IE11.
+
+The second example is the `bootstrap`, that shows an hack to allow customize bootstrap using CSS vars, but this doesn't 
+work well on IE11 as the browser doesn't allow to use calc on colors, and there's some bugs.
 
 ## Prerequisites
 
@@ -28,11 +32,6 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
 ### Linting
 
 * `npm run lint:hbs`
@@ -43,10 +42,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 

@@ -1,3 +1,5 @@
+// based on https://gist.github.com/johanlef/518a511b2b2f6b96c4f429b3af2f169a#file-_functions-override-scss
+
 @function is-color($color) {
   @if (type-of($color) == color) {
     @return true;
